@@ -1,20 +1,35 @@
 # Google Colab
 
-Install this repository without cloning (replace URL and branch):
+## Install from GitHub
+
+Replace `YOUR_GITHUB_USER` and branch (e.g. `main`):
 
 ```python
-!pip install "git+https://github.com/<YOUR_GITHUB_USER>/FIND_Delft_Assignment.git@main"
+import subprocess
+import sys
+
+subprocess.check_call(
+    [
+        sys.executable,
+        "-m",
+        "pip",
+        "install",
+        "-q",
+        "git+https://github.com/YOUR_GITHUB_USER/FIND_Delft_Assignment.git@main",
+    ]
+)
 ```
 
-Then in Python:
+Torch is usually preinstalled on Colab; after install, restart the runtime if the installer upgraded `torch`.
 
-```python
-import find_delft_assignment
-from find_delft_assignment.config import SamplingConfig
+## Open the same notebook as locally
 
-print(find_delft_assignment.__version__)
-```
+Use “Open in Colab” on `notebooks/ddim_experiment.ipynb` in your GitHub UI, or open:
 
-Upload your checkpoint to Colab (or mount Drive) and pass its path into your notebook once sampling is implemented.
+`https://colab.research.google.com/github/YOUR_GITHUB_USER/FIND_Delft_Assignment/blob/main/notebooks/ddim_experiment.ipynb`
 
-Torch on Colab is preinstalled; if you need a specific `torch` build for your checkpoint, pin it in a notebook cell before importing your model code.
+The first notebook cell installs the package; the rest matches the local workflow.
+
+## Checkpoints
+
+The default model is downloaded automatically from the Hugging Face Hub (`google/ddpm-cifar10-32`). No manual weight upload is required unless you switch `--model-id`.

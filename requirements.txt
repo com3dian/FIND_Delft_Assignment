@@ -1,7 +1,3 @@
-# Install the package in editable mode (recommended):
-#   pip install -e ".[dev]"
-#
-# Colab / one-shot from GitHub:
-#   pip install "git+https://github.com/<USER>/<REPO>.git@<BRANCH>#egg=find-delft-assignment"
-
+# Core + dev extras (see pyproject.toml for versions).
+# Includes matplotlib for assignment notebooks.
 -e .[dev]

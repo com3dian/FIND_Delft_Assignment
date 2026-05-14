@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "find-delft-assignment"
 version = "0.1.0"
-description = "DDIM sampling on a pretrained DDPM (FIND Delft assignment skeleton)."
+description = "DDIM sampling on a pretrained DDPM (FIND Delft assignment)."
 readme = "README.md"
 license = { file = "LICENSE" }
 requires-python = ">=3.9"
@@ -14,14 +14,17 @@ dependencies = [
   "pillow>=10",
   "torch>=2.0",
   "tqdm>=4.65",
+  "diffusers>=0.27",
+  "torchvision>=0.15",
+  "huggingface_hub>=0.20",
+  "safetensors>=0.4",
+  "accelerate>=0.27",
+  "matplotlib>=3.7",
 ]
 
 [project.optional-dependencies]
-dev = ["ruff>=0.4"]
-colab = ["jupyter>=1.0", "matplotlib>=3.7"]
-
-[project.scripts]
-find-delft-sample = "find_delft_assignment.cli.sample:main"
+dev = ["ruff>=0.4", "pytest>=8.0"]
+colab = ["jupyter>=1.0", "ipython>=8.12"]
 
 [tool.setuptools.packages.find]
 where = ["src"]

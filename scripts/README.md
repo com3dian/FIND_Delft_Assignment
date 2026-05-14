@@ -1,1 +1,1 @@
-Optional shell wrappers (e.g. batch sampling). Prefer the `find-delft-sample` console script from `pyproject.toml`.
+Optional shell wrappers for local automation. The main workflow is the Jupyter notebook under `notebooks/`.
