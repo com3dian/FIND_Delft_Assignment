@@ -1,0 +1,7 @@
+# Install the package in editable mode (recommended):
+#   pip install -e ".[dev]"
+#
+# Colab / one-shot from GitHub:
+#   pip install "git+https://github.com/<USER>/<REPO>.git@<BRANCH>#egg=find-delft-assignment"
+
+-e .[dev]
