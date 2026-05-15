@@ -1,6 +1,12 @@
-# FIND Delft Assignment — DDIM sampling on a pretrained DDPM
+<div align="center">
 
+# FIND Delft Assignment — DDIM sampling on a pretrained DDPM
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/com3dian/FIND_Delft_Assignment/blob/main/notebooks/ddim_experiment.ipynb)
 This repository implements **DDPM** (ancestral) and **DDIM** sampling on top of a **fixed pretrained** diffusion model: no training. The default checkpoint is **`google/ddpm-cifar10-32`** on the Hugging Face Hub — a **32×32** unconditional CIFAR-10 model that stays small in memory while matching a strong published baseline (see the [model card](https://huggingface.co/google/ddpm-cifar10-32)).
+
+
+</div>
+
 
 ## Setup
 
@@ -16,8 +22,6 @@ Optional notebook extras:
 ```bash
 pip install -e ".[dev,colab]"
 ```
-
-**CPU-only PyTorch:** if you do not want the default CUDA-enabled wheels from PyPI, install a CPU build of `torch` / `torchvision` first (see [https://pytorch.org/get-started/locally/](https://pytorch.org/get-started/locally/)), then `pip install -e .` so this package does not pull a different `torch` build.
 
 ## Layout
 
@@ -38,10 +42,15 @@ Open `notebooks/ddim_experiment.ipynb` and run all cells. On Colab, the first ce
 
 The first notebook cell installs the package from GitHub unless you are running locally. More detail: `colab/README.md`.
 
+## Contribution
+
+I manually implemented the code in the `src/find_delft_assignment/sampling` folder; an LLM was used for the remaining utilities. The core contribution is the DDIM sampling re-implementation, which can be found at
+
+[LINK HERE]
+
+This code was tested against the DDIM sampler from the Diffusers library. To visually compare the results, you can [open `ddim_experiment.ipynb` in Colab](https://colab.research.google.com/github/com3dian/FIND_Delft_Assignment/blob/main/notebooks/ddim_experiment.ipynb).
+
 ## Model choice
 
 `google/ddpm-cifar10-32` is used because it is **small** (fast iteration on laptop/Colab) yet **high quality** for its size. To use another Hub model, change the `model_id` argument to `load_pretrained_ddpm()` in the notebook (the repo must expose a compatible `DDPMPipeline` and scheduler).
 
-## License
-
-See `LICENSE`.
