@@ -30,15 +30,13 @@ pip install -e ".[dev,colab]"
 
 ## Reproduce
 
-Open `notebooks/ddim_experiment.ipynb` and run all cells. On Colab, set `COLAB_INSTALL_URL` in the first code cell to your fork’s `git+https://...` URL (see `colab/README.md`).
+Open `notebooks/ddim_experiment.ipynb` and run all cells. On Colab, the first cell installs from [this repo](https://github.com/com3dian/FIND_Delft_Assignment) by default; change `COLAB_INSTALL_URL` there if you use a fork (see `colab/README.md`).
 
 ## Colab
 
-Open the notebook in Colab (replace user and branch):
+[Open `ddim_experiment.ipynb` in Colab](https://colab.research.google.com/github/com3dian/FIND_Delft_Assignment/blob/main/notebooks/ddim_experiment.ipynb)
 
-[Open `ddim_experiment.ipynb` in Colab](https://colab.research.google.com/github/YOUR_GITHUB_USER/FIND_Delft_Assignment/blob/main/notebooks/ddim_experiment.ipynb)
-
-Then set the install URL in the first code cell. More detail: `colab/README.md`.
+The first notebook cell installs the package from GitHub unless you are running locally. More detail: `colab/README.md`.
 
 ## Model choice
 
