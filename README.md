@@ -1,8 +1,10 @@
 <div align="center">
+<img width="300" height="204" alt="image" src="https://github.com/user-attachments/assets/78f9ae92-463e-4b71-bdd3-e0fc25600c81" />
 
 # FIND Delft Assignment — DDIM sampling on a pretrained DDPM
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/com3dian/FIND_Delft_Assignment/blob/main/notebooks/ddim_experiment.ipynb)
-This repository implements **DDPM** (ancestral) and **DDIM** sampling on top of a **fixed pretrained** diffusion model: no training. The default checkpoint is **`google/ddpm-cifar10-32`** on the Hugging Face Hub — a **32×32** unconditional CIFAR-10 model that stays small in memory while matching a strong published baseline (see the [model card](https://huggingface.co/google/ddpm-cifar10-32)).
+
+This repository implements **DDPM** (ancestral) and **DDIM** sampling on top of a **fixed pretrained** diffusion model: no training. The default checkpoint is **`google/ddpm-cifar10-32`** on the Hugging Face Hub — a **32×32** unconditional CIFAR-10 model that stays small in memory while matching a strong published baseline (see the [model card](https://huggingface.co/google/ddpm-cifar10-32)). Suggested to use [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/com3dian/FIND_Delft_Assignment/blob/main/notebooks/ddim_experiment.ipynb) to reproduce this experiment.
 
 
 </div>
@@ -44,9 +46,9 @@ The first notebook cell installs the package from GitHub unless you are running 
 
 ## Contribution
 
-I manually implemented the code in the `src/find_delft_assignment/sampling` folder; an LLM was used for the remaining utilities. The core contribution is the DDIM sampling re-implementation, which can be found at
+I manually implemented the code in the `src/find_delft_assignment/sampling` folder; an LLM was used for vibe coding some utilities. The core contribution is the DDIM sampling re-implementation, which can be found at
 
-[LINK HERE]
+https://github.com/com3dian/FIND_Delft_Assignment/blob/6a1d0efe1d2e7e90e729c01b2e9465233c8178ea/src/find_delft_assignment/sampling/scheduler.py#L10-L72
 
 This code was tested against the DDIM sampler from the Diffusers library. To visually compare the results, you can [open `ddim_experiment.ipynb` in Colab](https://colab.research.google.com/github/com3dian/FIND_Delft_Assignment/blob/main/notebooks/ddim_experiment.ipynb).
 
