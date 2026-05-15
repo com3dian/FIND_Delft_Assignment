@@ -2,7 +2,8 @@
 <img width="300" height="204" alt="image" src="https://github.com/user-attachments/assets/78f9ae92-463e-4b71-bdd3-e0fc25600c81" />
 
 # FIND Delft Assignment — DDIM sampling on a pretrained DDPM
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/com3dian/FIND_Delft_Assignment/blob/main/notebooks/ddim_experiment.ipynb)
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/com3dian/FIND_Delft_Assignment/blob/main/notebooks/ddim_experiment.ipynb) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/com3dian/FIND_Delft_Assignment/blob/main/LICENSE)
 
 This repository implements **DDPM** (ancestral) and **DDIM** sampling on top of a **fixed pretrained** diffusion model: no training. The default checkpoint is **`google/ddpm-cifar10-32`** on the Hugging Face Hub — a **32×32** unconditional CIFAR-10 model that stays small in memory while matching a strong published baseline (see the [model card](https://huggingface.co/google/ddpm-cifar10-32)). Suggested to use [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/com3dian/FIND_Delft_Assignment/blob/main/notebooks/ddim_experiment.ipynb) to reproduce this experiment.
 
